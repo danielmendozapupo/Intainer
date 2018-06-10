@@ -3,9 +3,9 @@
 
 
 #include <iostream>
-#include <exception>
 #include<iomanip>
 #include <algorithm>
+#include<stdexcept>
 
 using namespace std;
 
@@ -15,7 +15,7 @@ private:
 	int _maxsize, *_items;
 	void CheckBounds(int index) const //checking if the index is between the range 
 	{
-		if (index < 0 || index >= _maxsize) throw ("intainer out of bounds");
+		if (index < 0 || index >= _maxsize) throw std::out_of_range("intainer out of bounds");
 	}
 public:
 
